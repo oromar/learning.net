@@ -1,0 +1,44 @@
+﻿@*
+ * Copyright (c) 2015 Samsung Electronics Co., Ltd. , (c) Center of Informatics
+ * Federal University of Pernambuco.
+ * All rights reserved.
+ *
+ * This software is a confidential and proprietary information of Samsung
+ * Electronics, Inc. ("Confidential Information").  You shall not disclose such
+ * Confidential Information and shall use it only in accordance with the terms
+ * of the license agreement you entered into with Samsung Electronics.
+ *@
+
+@model MvcMusicStore.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Album: @Model.Title</h2>
+<p>
+    <img alt="@Model.Title" src="@Model.AlbumArtUrl" />
+    
+</p>
+
+<div id="album-details">
+    <p>
+        <em>
+            Genre:
+        </em>
+        @Model.Genre.Name
+    </p>
+    <p>
+        <em>Artist:</em>
+        <@Model.Artist.Name
+    </p>
+    <p>
+        <em>Price:</em>
+        @String.Format("{0:F}", Model.Price)
+    </p>
+    <p class="button">
+        @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new {id = Model.AlbumId}, "")
+
+    </p>
+</div>
+

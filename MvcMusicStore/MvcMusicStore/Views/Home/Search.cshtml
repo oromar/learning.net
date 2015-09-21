@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MvcMusicStore.Models.Album>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search Results</h2>
+
+<table>
+    <tr>
+        <th>
+            GenreId
+        </th>
+        <th>
+            ArtistId
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Price
+        </th>    
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>    
+            @Html.DisplayFor(modelItem => item.Genre.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artist.Name)
+        </td>
+        <td>
+            @Html.ActionLink(item.Title, "Details", "Store", new { id = item.AlbumId }, null)               
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>        
+    </tr>
+}
+</table>
+
+<br /><br /><br />
+<p>
+    @Html.ActionLink("Back to Index", "Index", "Home")
+</p>

@@ -1,0 +1,28 @@
+﻿@*
+ * Copyright (c) 2015 Samsung Electronics Co., Ltd. , (c) Center of Informatics
+ * Federal University of Pernambuco.
+ * All rights reserved.
+ *
+ * This software is a confidential and proprietary information of Samsung
+ * Electronics, Inc. ("Confidential Information").  You shall not disclose such
+ * Confidential Information and shall use it only in accordance with the terms
+ * of the license agreement you entered into with Samsung Electronics.
+ *@
+
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
+}
+<div id="promotion">
+</div>
+<h3><em>Fresh</em> off the grill</h3>
+<ul id="album-list">
+    @foreach (var album in Model)
+    {
+        <li><a href="@Url.Action("Details", "Store",
+                new { id = album.AlbumId })">
+            <img alt="@album.Title" src="@album.AlbumArtUrl" />
+            <span>@album.Title</span>
+        </a>
+        </li>
+    }
+</ul>
