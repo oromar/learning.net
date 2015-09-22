@@ -16,5 +16,6 @@ C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\
 C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.xml
 C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Deployment.xml
 C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
 C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
 C:\Users\oldm\Documents\Visual Studio 2012\Projects\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb

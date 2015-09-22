@@ -29,8 +29,16 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Search(string SearchValue)
         {
-            var albums = storeDB.Albums.Where(a => a.Title.Contains(SearchValue)).ToList();
+            List<Album> albums = null;
 
+            if (!string.IsNullOrEmpty(SearchValue))
+            {
+                albums = storeDB.Albums.Where(a => a.Title.Contains(SearchValue) || a.Artist.Name.Contains(SearchValue)).ToList();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
             return View(albums);
         }
 
